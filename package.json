@@ -1,0 +1,79 @@
+{
+  "name": "@hippocortex/sdk",
+  "version": "1.2.1",
+  "description": "Official Hippocortex SDK \u2014 AI agent memory that learns from experience",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./auto": {
+      "import": "./dist/auto.js",
+      "types": "./dist/auto.d.ts"
+    },
+    "./register": {
+      "import": "./dist/register.js",
+      "types": "./dist/register.d.ts"
+    },
+    "./adapters": {
+      "import": "./dist/adapters/index.js",
+      "types": "./dist/adapters/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "postinstall": "node dist/postinstall.js"
+  },
+  "keywords": [
+    "hippocortex",
+    "ai",
+    "memory",
+    "agents",
+    "llm",
+    "rag"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Hippocortex",
+    "email": "dev@hippocortex.dev",
+    "url": "https://hippocortex.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmaiops-alt/hippocortex-js.git"
+  },
+  "homepage": "https://hippocortex.dev",
+  "bugs": {
+    "url": "https://github.com/vmaiops-alt/hippocortex-js/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "openai": "^4.0.0",
+    "@anthropic-ai/sdk": "^0.20.0"
+  },
+  "peerDependencies": {
+    "openai": ">=4.0.0",
+    "@anthropic-ai/sdk": ">=0.20.0"
+  },
+  "peerDependenciesMeta": {
+    "openai": {
+      "optional": true
+    },
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  }
+}
